@@ -1,0 +1,35 @@
+---
+title: "Local vs. Cloud LLMs: The Model Routing Revolution"
+excerpt: "The smartest AI systems won't run one model — they'll route between many. Model routing is becoming the new standard for production AI."
+date: "2025-01-15"
+author: "Rajesh Kolachana"
+tag: "AI Engineering"
+readTime: "6 min read"
+published: true
+---
+
+The debate between local and cloud-hosted LLMs is missing the point entirely. The future isn't about choosing one or the other — it's about building systems smart enough to route between them dynamically. Model routing is quickly becoming the new standard for production AI, and if you're still deploying a single model for all your inference needs, you're leaving money and performance on the table.
+
+## The Problem With Single-Model Architectures
+
+Here's what I see repeatedly at startups: they pick one LLM — usually GPT-4 or Claude — and pipe every request through it regardless of complexity. A simple "classify this email as spam or not" hits the same $0.03/1K-token endpoint as "analyze this 50-page legal contract and extract all liability clauses." The result? Ballooning API costs, unnecessary latency for simple tasks, and a single point of failure that takes down the entire application when the provider has an outage.
+
+At Amazon, we never would have built a recommendation system that used the same model weight for every prediction. We had lightweight models for quick filters, heavier ensemble methods for ranking, and specialized models for edge cases. The same principle applies to LLM-powered products.
+
+## Model Routing as an Architecture Pattern
+
+The model routing approach is straightforward in concept: classify incoming requests by complexity, latency requirements, and cost sensitivity — then route to the appropriate model. A local 7B parameter model running on your own GPU can handle 80% of classification and extraction tasks at a fraction of the cost. Cloud-hosted frontier models handle the remaining 20% that genuinely need advanced reasoning.
+
+The implementation looks something like this: a lightweight classifier (can be as simple as a regex + keyword system, or a small BERT model) evaluates each request and assigns it a tier. Tier 1 goes to your local Mistral or Llama instance. Tier 2 hits a mid-range cloud model. Tier 3 — the complex, high-stakes queries — routes to GPT-4 or Claude Opus. You add fallback logic so if a local model's confidence score drops below a threshold, it automatically escalates.
+
+## Why This Matters Now
+
+Three things changed in the last year that make model routing practical. First, open-source models got genuinely good — Llama 3, Mistral, and Phi-3 can handle production workloads that would have required GPT-4 twelve months ago. Second, inference infrastructure matured: tools like vLLM, Ollama, and TensorRT-LLM make local deployment less painful. Third, the cost gap widened. Frontier model pricing hasn't dropped as fast as open-source quality has risen, making the economic case for routing undeniable.
+
+The startups I work with that adopt model routing typically see 60-70% cost reduction on their LLM spend with no measurable quality degradation on end-user metrics. The key is measuring what matters — not benchmark scores, but actual user outcomes. If your customers can't tell the difference between a local model's response and a cloud model's response for a given task, you're paying a premium for nothing.
+
+## Getting Started
+
+If you're building an LLM-powered product, start simple. Log every request with its complexity characteristics. After a week of data, you'll see a clear distribution — most requests cluster in a "simple" bucket that doesn't need frontier-model capability. Build a router for those first. You can always expand the routing logic later.
+
+The companies that will win in AI aren't the ones with access to the best model. Everyone has access to the best models. The winners will be the ones who build the smartest infrastructure around those models — and model routing is the first step.
