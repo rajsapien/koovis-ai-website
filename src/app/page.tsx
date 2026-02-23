@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import AnimateIn from "@/components/AnimateIn";
 import Button from "@/components/Button";
+import ContactForm from "@/components/ContactForm";
 import NewsletterForm from "@/components/NewsletterForm";
 import SectionLabel from "@/components/SectionLabel";
 import SectionTitle from "@/components/SectionTitle";
@@ -143,7 +144,7 @@ export default function HomePage() {
 
           <AnimateIn delay={0.3}>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button href="/contact" size="lg">
+              <Button href="#work-with-us" size="lg">
                 Start a Project <ArrowRight size={16} />
               </Button>
               <Button href="/services" variant="outline" size="lg">
@@ -413,31 +414,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ==================== FINAL CTA ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24 lg:py-32">
-        <div className="mx-auto max-w-2xl px-5 sm:px-6 text-center">
-          <AnimateIn>
-            <SectionTitle as="h2">
-              The companies that win in AI are building{" "}
-              <em>right now.</em>
-            </SectionTitle>
-          </AnimateIn>
-          <AnimateIn delay={0.1}>
-            <p className="mt-6 text-base leading-relaxed text-neutral-400">
-              We work with a select number of clients at a time to ensure every
-              engagement gets the focus it deserves. Every week you wait, your
-              competitors are shipping. The best time to build was yesterday.
-              The second best time is now.
-            </p>
-          </AnimateIn>
-          <AnimateIn delay={0.2}>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button href="/contact" size="lg">
-                Start a Conversation <ArrowRight size={16} />
-              </Button>
-              <Button href="/contact" variant="outline" size="lg">
-                Schedule a Call <ArrowRight size={16} />
-              </Button>
+      {/* ==================== WORK WITH US ==================== */}
+      <section id="work-with-us" className="border-t border-white/10 py-16 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-3xl px-5 sm:px-6">
+          <div className="text-center">
+            <AnimateIn>
+              <SectionLabel>Work With Us</SectionLabel>
+            </AnimateIn>
+            <AnimateIn delay={0.1}>
+              <SectionTitle as="h2" className="mt-5">
+                Ready to build something <em>exceptional?</em>
+              </SectionTitle>
+            </AnimateIn>
+            <AnimateIn delay={0.2}>
+              <p className="mt-6 text-base leading-relaxed text-neutral-400">
+                We work with a select number of clients at a time to ensure every
+                engagement gets the attention it deserves. Tell us about your
+                project &mdash; no obligation, no sales pitch. Just an honest
+                assessment.
+              </p>
+            </AnimateIn>
+          </div>
+          <AnimateIn delay={0.3}>
+            <div className="mt-12">
+              <ContactForm />
             </div>
           </AnimateIn>
         </div>
