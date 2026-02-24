@@ -37,7 +37,7 @@ export async function POST(request: Request) {
       .join("\n");
 
     await resend.emails.send({
-      from: "Koovis AI <onboarding@resend.dev>",
+      from: "Koovis AI <hello@koovis.ai>",
       to: [process.env.CONTACT_EMAIL ?? "hello@koovis.ai"],
       subject: `New inquiry from ${name}${company ? ` (${company})` : ""}`,
       replyTo: email,

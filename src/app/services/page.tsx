@@ -122,7 +122,7 @@ export default function ServicesPage() {
           </SectionTitle>
         </AnimateIn>
         <AnimateIn delay={0.2}>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-400">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-muted">
             We partner with businesses to build AI-powered products and systems
             from zero to production. No handoff &mdash; we stay from
             architecture through deployment and beyond. Every engagement starts
@@ -133,12 +133,12 @@ export default function ServicesPage() {
       </section>
 
       {/* ==================== SERVICE CARDS ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24">
+      <section className="border-t border-border py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {serviceCards.map((svc, i) => (
               <AnimateIn key={svc.title} delay={i * 0.1}>
-                <div className="group relative h-full overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] transition-all duration-300 hover:border-accent/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5">
+                <div className="group relative h-full overflow-hidden rounded-2xl border border-border-subtle bg-surface transition-all duration-300 hover:border-accent/30 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5">
                   {/* Top gradient line */}
                   <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
@@ -149,15 +149,15 @@ export default function ServicesPage() {
                       strokeWidth={1.5}
                     />
 
-                    <h3 className="mt-5 text-xl font-semibold text-white">
+                    <h3 className="mt-5 text-xl font-semibold text-heading">
                       {svc.title}
                     </h3>
 
-                    <p className="mt-1 font-serif text-sm italic text-neutral-400">
+                    <p className="mt-1 font-serif text-sm italic text-text-muted">
                       {svc.tagline}
                     </p>
 
-                    <p className="mt-4 text-sm leading-relaxed text-neutral-400">
+                    <p className="mt-4 text-sm leading-relaxed text-text-muted">
                       {svc.desc}
                     </p>
 
@@ -165,7 +165,7 @@ export default function ServicesPage() {
                       {svc.capabilities.map((cap) => (
                         <li
                           key={cap}
-                          className="flex items-start gap-2.5 text-sm text-neutral-500"
+                          className="flex items-start gap-2.5 text-sm text-text-dim"
                         >
                           <span className="mt-[7px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent/60" />
                           {cap}
@@ -193,7 +193,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ==================== PROCESS ==================== */}
-      <section className="border-t border-white/10 bg-white/[0.02] py-16 sm:py-24">
+      <section className="border-t border-border bg-surface py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <AnimateIn>
             <SectionLabel>Process</SectionLabel>
@@ -206,13 +206,13 @@ export default function ServicesPage() {
             {processSteps.map((step, i) => (
               <AnimateIn key={step.num} delay={0.1 + i * 0.08}>
                 <div className="relative">
-                  <span className="font-jetbrains text-4xl sm:text-5xl lg:text-6xl font-bold text-white/[0.04] select-none leading-none">
+                  <span className="font-jetbrains text-4xl sm:text-5xl lg:text-6xl font-bold text-text-faint select-none leading-none">
                     {step.num}
                   </span>
-                  <h3 className="mt-3 text-lg font-semibold text-white">
+                  <h3 className="mt-3 text-lg font-semibold text-heading">
                     {step.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                  <p className="mt-3 text-sm leading-relaxed text-text-dim">
                     {step.desc}
                   </p>
                 </div>
@@ -223,7 +223,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ==================== ENGAGEMENT MODELS ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24">
+      <section className="border-t border-border py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <AnimateIn>
             <SectionLabel>Engagement Models</SectionLabel>
@@ -237,19 +237,19 @@ export default function ServicesPage() {
           <div className="mt-12 sm:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {engagementModels.map((model, i) => (
               <AnimateIn key={model.title} delay={0.1 + i * 0.1}>
-                <div className="group h-full rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-colors hover:border-accent/20">
-                  <h3 className="text-lg font-semibold text-white">
+                <div className="group h-full rounded-2xl border border-border-subtle bg-surface p-6 transition-colors hover:border-accent/20">
+                  <h3 className="text-lg font-semibold text-heading">
                     {model.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-400">
+                  <p className="mt-3 text-sm leading-relaxed text-text-muted">
                     {model.desc}
                   </p>
                   <div className="mt-5 space-y-2">
-                    <p className="text-sm text-neutral-500">
+                    <p className="text-sm text-text-dim">
                       <span className="font-medium text-accent/80">Best for:</span>{" "}
                       {model.bestFor}
                     </p>
-                    <p className="font-jetbrains text-xs text-neutral-600">
+                    <p className="font-jetbrains text-xs text-text-dim">
                       {model.duration}
                     </p>
                   </div>
@@ -261,14 +261,14 @@ export default function ServicesPage() {
       </section>
 
       {/* ==================== CTA ==================== */}
-      <section className="border-t border-white/10 py-24">
+      <section className="border-t border-border py-24">
         <div className="mx-auto max-w-2xl px-6">
           <AnimateIn>
-            <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-10 text-center">
+            <div className="rounded-2xl border border-border-subtle bg-surface p-10 text-center">
               <SectionTitle>
                 Have a problem worth <em>solving?</em>
               </SectionTitle>
-              <p className="mt-4 text-base text-neutral-400">
+              <p className="mt-4 text-base text-text-muted">
                 Every engagement starts with a conversation &mdash; no pressure,
                 no commitment. Tell us about the product or system you need
                 built, and we&apos;ll give you an honest assessment. The best

@@ -44,10 +44,10 @@ export default function NewsletterForm() {
         type="email"
         placeholder="you@company.com"
         required
-        className="flex-1 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-neutral-500 outline-none transition-all duration-200 focus:border-accent/50 focus:shadow-[0_0_12px_rgba(34,211,238,0.15)] min-h-[44px]"
+        className="flex-1 rounded-full border border-border bg-surface px-4 py-3 text-sm text-heading placeholder:text-text-dim outline-none transition-all duration-200 focus:border-accent/50 focus:shadow-[0_0_12px_rgb(var(--color-accent-rgb)/0.15)] min-h-[44px]"
       />
       <Button type="submit" size="sm" disabled={status === "loading"}>
-        {status === "loading" ? "..." : "Subscribe"}
+        {status === "loading" ? "Subscribing..." : "Subscribe"}
       </Button>
 
       {status === "error" && (

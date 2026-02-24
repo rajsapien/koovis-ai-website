@@ -47,8 +47,8 @@ export default function ContactForm() {
       <div className="flex items-center gap-3 rounded-2xl border border-accent/20 bg-accent/5 p-6">
         <span className="text-2xl text-accent">&#10003;</span>
         <div>
-          <p className="font-semibold text-white">Message received!</p>
-          <p className="text-sm text-neutral-400">
+          <p className="font-semibold text-heading">Message received!</p>
+          <p className="text-sm text-text-muted">
             We&apos;ll review your project details and get back within 24 hours.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function ContactForm() {
   }
 
   const inputClasses =
-    "w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3.5 text-sm text-white placeholder:text-neutral-500 outline-none transition-all duration-200 focus:border-accent/50 focus:shadow-[0_0_12px_rgba(34,211,238,0.15)] min-h-[44px]";
+    "w-full rounded-lg border border-border bg-surface px-4 py-3.5 text-sm text-heading placeholder:text-text-dim outline-none transition-all duration-200 focus:border-accent/50 focus:shadow-[0_0_12px_rgb(var(--color-accent-rgb)/0.15)] min-h-[44px]";
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -89,11 +89,11 @@ export default function ContactForm() {
           className={`${inputClasses} appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%2371717a%22%20d%3D%22M2%204l4%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_16px_center] bg-no-repeat pr-10`}
           defaultValue=""
         >
-          <option value="" disabled className="bg-neutral-900 text-neutral-500">
+          <option value="" disabled className="bg-card text-text-dim">
             Budget range
           </option>
           {budgetOptions.map((opt) => (
-            <option key={opt} value={opt} className="bg-neutral-900 text-white">
+            <option key={opt} value={opt} className="bg-card text-heading">
               {opt}
             </option>
           ))}

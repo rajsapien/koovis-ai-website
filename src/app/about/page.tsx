@@ -47,10 +47,10 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== COMPANY STORY ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24">
+      <section className="border-t border-border py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-5 sm:px-6">
           <AnimateIn>
-            <p className="text-base leading-relaxed text-neutral-400">
+            <p className="text-base leading-relaxed text-text-muted">
               Koovis AI was founded on a conviction: the AI industry has a
               delivery problem. Not a talent problem. Not a funding problem. A
               delivery problem. Companies invest heavily in research and
@@ -62,7 +62,7 @@ export default function AboutPage() {
           </AnimateIn>
 
           <AnimateIn delay={0.1}>
-            <p className="mt-5 text-base leading-relaxed text-neutral-400">
+            <p className="mt-5 text-base leading-relaxed text-text-muted">
               We built Koovis AI to close that gap. Our founding team spent years
               building ML systems at global scale — recommendation engines,
               NLP systems, advertising optimization — across some of the most
@@ -73,7 +73,7 @@ export default function AboutPage() {
           </AnimateIn>
 
           <AnimateIn delay={0.15}>
-            <p className="mt-5 text-base leading-relaxed text-neutral-400">
+            <p className="mt-5 text-base leading-relaxed text-text-muted">
               Now we bring that same standard to businesses that need
               AI-powered products and systems built right &mdash; whether
               you&apos;re a startup building your core product, a mid-market
@@ -86,7 +86,7 @@ export default function AboutPage() {
           </AnimateIn>
 
           <AnimateIn delay={0.2}>
-            <p className="mt-5 text-base leading-relaxed text-white/90 font-medium">
+            <p className="mt-5 text-base leading-relaxed text-heading font-medium">
               Every engagement we take is a bet on a shared outcome. We
               don&apos;t bill hours and disappear. We ship systems that work, and
               we stand behind them.
@@ -96,15 +96,15 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== VISION ==================== */}
-      <section className="border-t border-white/10 bg-accent/[0.03] py-16 sm:py-24">
+      <section className="border-t border-border bg-accent/[0.03] py-16 sm:py-24">
         <div className="mx-auto max-w-3xl px-5 sm:px-6">
           <AnimateIn>
-            <h2 className="font-serif text-2xl font-semibold text-white">
+            <h2 className="font-serif text-2xl font-semibold text-heading">
               Our Vision
             </h2>
           </AnimateIn>
           <AnimateIn delay={0.1}>
-            <p className="mt-6 text-base leading-relaxed text-neutral-400">
+            <p className="mt-6 text-base leading-relaxed text-text-muted">
               We&apos;re building Koovis AI to become one of the most trusted
               names in applied AI engineering. Not the largest. Not the
               flashiest. The most trusted. The company that technical founders
@@ -112,7 +112,7 @@ export default function AboutPage() {
             </p>
           </AnimateIn>
           <AnimateIn delay={0.15}>
-            <p className="mt-4 text-base leading-relaxed text-neutral-400">
+            <p className="mt-4 text-base leading-relaxed text-text-muted">
               Our aspiration is grounded: earn trust through results, grow
               through reputation, and build a portfolio of production systems
               that speaks louder than any pitch deck ever could.
@@ -122,7 +122,7 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== FOUNDER SECTION ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24">
+      <section className="border-t border-border py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <AnimateIn>
             <SectionLabel>Founder</SectionLabel>
@@ -132,13 +132,13 @@ export default function AboutPage() {
             {/* Photo placeholder */}
             <AnimateIn delay={0.1}>
               <div className="flex flex-col items-center gap-5 lg:items-start lg:sticky lg:top-32">
-                <div className="flex h-[160px] w-[160px] sm:h-[200px] sm:w-[200px] items-center justify-center rounded-2xl bg-gradient-to-br from-neutral-800 to-neutral-900 border border-white/10 shadow-lg shadow-accent/5">
+                <div className="flex h-[160px] w-[160px] sm:h-[200px] sm:w-[200px] items-center justify-center rounded-2xl bg-gradient-to-br from-card to-bg border border-border shadow-lg shadow-accent/5">
                   <span className="font-serif text-5xl font-semibold text-accent/80 select-none">
                     RK
                   </span>
                 </div>
                 <div className="text-center lg:text-left">
-                  <h2 className="font-serif text-2xl font-semibold text-white">
+                  <h2 className="font-serif text-2xl font-semibold text-heading">
                     Rajesh Kolachana
                   </h2>
                   <p className="mt-1 font-jetbrains text-xs font-medium uppercase tracking-[0.2em] text-accent">
@@ -151,7 +151,7 @@ export default function AboutPage() {
             {/* Bio — first person */}
             <div className="flex flex-col gap-5">
               <AnimateIn delay={0.15}>
-                <p className="text-base leading-relaxed text-neutral-400">
+                <p className="text-base leading-relaxed text-text-muted">
                   I&apos;m Rajesh Kolachana. I started my career in structural
                   engineering &mdash; IIT Roorkee for undergrad, Indian Institute
                   of Science (IISc Bangalore) for my master&apos;s, ranked in the
@@ -163,7 +163,7 @@ export default function AboutPage() {
               </AnimateIn>
 
               <AnimateIn delay={0.2}>
-                <p className="text-base leading-relaxed text-neutral-400">
+                <p className="text-base leading-relaxed text-text-muted">
                   That pivot led me through InMobi, where I earned a Rising Star
                   Award after scaling an ad account from $3K to $80K daily budget
                   in 8 months. Then to AgreeYa Solutions, where client recognition
@@ -175,7 +175,7 @@ export default function AboutPage() {
               </AnimateIn>
 
               <AnimateIn delay={0.25}>
-                <p className="text-base leading-relaxed text-neutral-400">
+                <p className="text-base leading-relaxed text-text-muted">
                   At Amazon, I built the FBA Recommendation Engine that drove
                   $4.4B in GMS using causal ML, engineered NLP systems generating
                   $26M in annual revenue across 9 marketplaces, created
@@ -188,7 +188,7 @@ export default function AboutPage() {
               </AnimateIn>
 
               <AnimateIn delay={0.3}>
-                <p className="text-base leading-relaxed text-neutral-400">
+                <p className="text-base leading-relaxed text-text-muted">
                   I left because I kept seeing the same problem from the outside:
                   companies with strong ideas but no practical path from prototype
                   to production. The gap isn&apos;t the model &mdash; it&apos;s
@@ -199,7 +199,7 @@ export default function AboutPage() {
               </AnimateIn>
 
               <AnimateIn delay={0.35}>
-                <p className="text-base leading-relaxed text-white/90 font-medium">
+                <p className="text-base leading-relaxed text-heading font-medium">
                   That&apos;s why I founded Koovis AI. To bring that same
                   level of ML engineering to companies that need it most &mdash;
                   with the honesty, rigor, and ownership that every engagement
@@ -212,7 +212,7 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== PRINCIPLES ==================== */}
-      <section className="border-t border-white/10 bg-white/[0.02] py-16 sm:py-24">
+      <section className="border-t border-border bg-surface py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <AnimateIn>
             <SectionLabel>Principles</SectionLabel>
@@ -224,12 +224,12 @@ export default function AboutPage() {
           <div className="mt-12 sm:mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {principles.map((p, i) => (
               <AnimateIn key={p.title} delay={0.1 + i * 0.1}>
-                <div className="h-full rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6">
+                <div className="h-full rounded-2xl border border-border-subtle bg-surface p-6">
                   <div className="mb-5 h-[3px] w-10 rounded-full bg-accent" />
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="text-lg font-semibold text-heading">
                     {p.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                  <p className="mt-3 text-sm leading-relaxed text-text-dim">
                     {p.desc}
                   </p>
                 </div>
@@ -240,14 +240,14 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== CTA ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24">
+      <section className="border-t border-border py-16 sm:py-24">
         <div className="mx-auto max-w-2xl px-5 sm:px-6">
           <AnimateIn>
-            <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-10 text-center">
+            <div className="rounded-2xl border border-border-subtle bg-surface p-10 text-center">
               <SectionTitle>
                 Ready to build something that <em>works?</em>
               </SectionTitle>
-              <p className="mt-4 text-base text-neutral-400">
+              <p className="mt-4 text-base text-text-muted">
                 We take on a limited number of consulting engagements to ensure
                 every client gets exceptional results. Tell us about the product
                 or system you need built.

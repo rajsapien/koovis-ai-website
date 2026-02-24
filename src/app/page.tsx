@@ -3,7 +3,6 @@ import { ArrowRight } from "lucide-react";
 import AnimateIn from "@/components/AnimateIn";
 import Button from "@/components/Button";
 import ContactForm from "@/components/ContactForm";
-import NewsletterForm from "@/components/NewsletterForm";
 import SectionLabel from "@/components/SectionLabel";
 import SectionTitle from "@/components/SectionTitle";
 import Link from "next/link";
@@ -137,14 +136,14 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto max-w-4xl px-5 sm:px-6 text-center">
           <AnimateIn>
-            <h1 className="font-serif text-[clamp(2rem,6vw,4.5rem)] font-semibold leading-[1.15] tracking-tight text-white">
+            <h1 className="font-serif text-[clamp(2rem,6vw,4.5rem)] font-semibold leading-[1.15] tracking-tight text-heading">
               Your AI Deserves Better Than a{" "}
               <span className="text-accent italic">Proof of Concept.</span>
             </h1>
           </AnimateIn>
 
           <AnimateIn delay={0.15}>
-            <p className="mx-auto mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg leading-relaxed text-neutral-400">
+            <p className="mx-auto mt-6 sm:mt-8 max-w-2xl text-base sm:text-lg leading-relaxed text-text-muted">
               We partner with businesses to design, build, and deploy
               production-grade AI systems. End-to-end product and systems
               development — from architecture through deployment. No agency
@@ -167,7 +166,7 @@ export default function HomePage() {
       </section>
 
       {/* ==================== MISSION STATEMENT ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24 lg:py-32">
+      <section className="border-t border-border py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-4xl px-5 sm:px-6">
           <div className="border-l-2 border-accent/40 pl-8 sm:pl-12">
             <AnimateIn>
@@ -179,14 +178,14 @@ export default function HomePage() {
               </SectionTitle>
             </AnimateIn>
             <AnimateIn delay={0.2}>
-              <p className="mt-6 text-base leading-relaxed text-neutral-400">
+              <p className="mt-6 text-base leading-relaxed text-text-muted">
                 Most businesses that invest in AI hit the same wall: the model
                 works in a demo but never makes it to production. Prototypes get
                 celebrated while the engineering needed to turn them into real
                 products &mdash; data pipelines, deployment infrastructure,
                 monitoring, reliability &mdash; gets underestimated or ignored.
               </p>
-              <p className="mt-4 text-base leading-relaxed text-neutral-400">
+              <p className="mt-4 text-base leading-relaxed text-text-muted">
                 We founded Koovis AI to solve that problem for businesses like
                 yours. We bring the engineering rigor forged at the scale of
                 global marketplaces and apply it to building the AI-powered
@@ -194,7 +193,7 @@ export default function HomePage() {
               </p>
             </AnimateIn>
             <AnimateIn delay={0.3}>
-              <p className="mt-6 text-lg font-medium text-white">
+              <p className="mt-6 text-lg font-medium text-heading">
                 We don&apos;t just build AI. We build AI-powered products and
                 systems that drive real business results.
               </p>
@@ -204,7 +203,7 @@ export default function HomePage() {
       </section>
 
       {/* ==================== CAPABILITIES / WHAT WE DO ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24 lg:py-32">
+      <section className="border-t border-border py-16 sm:py-24 lg:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-20">
           {/* Left column */}
           <div className="flex flex-col justify-center">
@@ -218,7 +217,7 @@ export default function HomePage() {
               </SectionTitle>
             </AnimateIn>
             <AnimateIn delay={0.2}>
-              <p className="mt-6 text-base leading-relaxed text-neutral-400">
+              <p className="mt-6 text-base leading-relaxed text-text-muted">
                 Whether you need an intelligent product built from scratch, a
                 model taken from prototype to production, or a technical strategy
                 before committing &mdash; we handle it end-to-end. Every
@@ -241,16 +240,16 @@ export default function HomePage() {
               <AnimateIn key={svc.num} delay={0.1 + i * 0.1}>
                 <Link
                   href="/services"
-                  className="group flex items-start gap-5 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-all duration-200 hover:border-accent/20 hover:bg-white/[0.04]"
+                  className="group flex items-start gap-5 rounded-2xl border border-border-subtle bg-surface p-6 transition-all duration-200 hover:border-accent/20 hover:bg-surface"
                 >
                   <span className="font-jetbrains text-sm font-semibold text-accent/60 group-hover:text-accent transition-colors">
                     {svc.num}
                   </span>
                   <div className="flex-1">
-                    <h3 className="text-base font-semibold text-white">
+                    <h3 className="text-base font-semibold text-heading">
                       {svc.title}
                     </h3>
-                    <p className="mt-1 text-sm text-neutral-500">
+                    <p className="mt-1 text-sm text-text-dim">
                       {svc.desc}
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2">
@@ -266,7 +265,7 @@ export default function HomePage() {
                   </div>
                   <ArrowRight
                     size={18}
-                    className="mt-1 flex-shrink-0 text-neutral-600 opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-1 group-hover:text-accent"
+                    className="mt-1 flex-shrink-0 text-text-dim opacity-0 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-1 group-hover:text-accent"
                   />
                 </Link>
               </AnimateIn>
@@ -276,7 +275,7 @@ export default function HomePage() {
       </section>
 
       {/* ==================== PROOF SECTION ==================== */}
-      <section className="border-t border-white/10 bg-white/[0.02] py-16 sm:py-24 lg:py-32">
+      <section className="border-t border-border bg-surface py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <AnimateIn>
             <SectionLabel>Proven Impact</SectionLabel>
@@ -287,7 +286,7 @@ export default function HomePage() {
             </SectionTitle>
           </AnimateIn>
           <AnimateIn delay={0.15}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-400">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-muted">
               Production systems, not prototypes. Real revenue impact, measured
               in real dollars, deployed across real global marketplaces.
             </p>
@@ -296,14 +295,14 @@ export default function HomePage() {
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {metrics.map((m, i) => (
               <AnimateIn key={m.value + m.label} delay={0.05 * i}>
-                <div className="group h-full rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-colors hover:border-accent/20">
+                <div className="group h-full rounded-2xl border border-border-subtle bg-surface p-6 transition-colors hover:border-accent/20">
                   <p className="font-jetbrains text-3xl font-semibold text-accent">
                     {m.value}
                   </p>
-                  <p className="mt-1 text-sm font-medium text-white">
+                  <p className="mt-1 text-sm font-medium text-heading">
                     {m.label}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                  <p className="mt-3 text-sm leading-relaxed text-text-dim">
                     {m.desc}
                   </p>
                 </div>
@@ -314,7 +313,7 @@ export default function HomePage() {
       </section>
 
       {/* ==================== WHY KOOVIS AI ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24 lg:py-32">
+      <section className="border-t border-border py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <AnimateIn>
             <SectionLabel>Why Us</SectionLabel>
@@ -328,12 +327,12 @@ export default function HomePage() {
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {whyUsCards.map((card, i) => (
               <AnimateIn key={card.title} delay={0.05 + i * 0.07}>
-                <div className="h-full rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-colors hover:border-accent/20">
+                <div className="h-full rounded-2xl border border-border-subtle bg-surface p-6 transition-colors hover:border-accent/20">
                   <div className="mb-4 h-0.5 w-10 bg-accent/60" />
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-base font-semibold text-heading">
                     {card.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                  <p className="mt-3 text-sm leading-relaxed text-text-dim">
                     {card.desc}
                   </p>
                 </div>
@@ -344,7 +343,7 @@ export default function HomePage() {
       </section>
 
       {/* ==================== WHO WE WORK WITH ==================== */}
-      <section className="relative border-t border-white/10 py-16 sm:py-24 lg:py-32 overflow-hidden">
+      <section className="relative border-t border-border py-16 sm:py-24 lg:py-32 overflow-hidden">
         {/* Left edge cyan gradient */}
         <div className="pointer-events-none absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-accent/[0.04] to-transparent" />
 
@@ -359,7 +358,7 @@ export default function HomePage() {
             </SectionTitle>
           </AnimateIn>
           <AnimateIn delay={0.2}>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-400">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-muted">
               We work best with companies that have a real problem, a clear
               ambition, and the willingness to invest in getting it right. If
               any of these sound like you, we should talk.
@@ -369,12 +368,12 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {whoWeWorkWith.map((item, i) => (
               <AnimateIn key={item.title} delay={0.1 + i * 0.08}>
-                <div className="h-full rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-colors hover:border-accent/20">
+                <div className="h-full rounded-2xl border border-border-subtle bg-surface p-6 transition-colors hover:border-accent/20">
                   <div className="mb-4 h-0.5 w-10 bg-accent/60" />
-                  <h3 className="text-base font-semibold text-white">
+                  <h3 className="text-base font-semibold text-heading">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                  <p className="mt-3 text-sm leading-relaxed text-text-dim">
                     {item.desc}
                   </p>
                 </div>
@@ -392,34 +391,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ==================== NEWSLETTER ==================== */}
-      <section className="border-t border-white/10 bg-white/[0.02] py-16 sm:py-24 lg:py-32">
-        <div className="mx-auto max-w-2xl px-5 sm:px-6 text-center">
-          <AnimateIn>
-            <SectionLabel>Newsletter</SectionLabel>
-          </AnimateIn>
-          <AnimateIn delay={0.1}>
-            <SectionTitle as="h2" className="mt-5">
-              AI insights from the <em>trenches.</em>
-            </SectionTitle>
-          </AnimateIn>
-          <AnimateIn delay={0.2}>
-            <p className="mt-6 text-base leading-relaxed text-neutral-400">
-              Lessons from building production AI systems, founder updates, and
-              the occasional contrarian take on where the industry is headed.
-              No fluff. No spam. Just signal.
-            </p>
-          </AnimateIn>
-          <AnimateIn delay={0.3}>
-            <div className="mx-auto mt-8 max-w-md">
-              <NewsletterForm />
-            </div>
-          </AnimateIn>
-        </div>
-      </section>
-
       {/* ==================== WORK WITH US ==================== */}
-      <section id="work-with-us" className="border-t border-white/10 py-16 sm:py-24 lg:py-32">
+      <section id="work-with-us" className="border-t border-border py-16 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-3xl px-5 sm:px-6">
           <div className="text-center">
             <AnimateIn>
@@ -431,7 +404,7 @@ export default function HomePage() {
               </SectionTitle>
             </AnimateIn>
             <AnimateIn delay={0.2}>
-              <p className="mt-6 text-base leading-relaxed text-neutral-400">
+              <p className="mt-6 text-base leading-relaxed text-text-muted">
                 We take on a limited number of consulting engagements at a time
                 to ensure exceptional results. Tell us about your project
                 &mdash; no obligation, no sales pitch. Just an honest

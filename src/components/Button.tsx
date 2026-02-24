@@ -27,11 +27,11 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-accent text-neutral-950 font-semibold shadow-[0_0_24px_rgba(34,211,238,0.35)] hover:shadow-[0_0_32px_rgba(34,211,238,0.5)] hover:brightness-110 active:brightness-90",
+    "bg-accent text-heading font-semibold shadow-accent-glow hover:shadow-accent-glow-lg hover:brightness-110 active:brightness-90",
   outline:
     "border border-accent/50 text-accent bg-transparent hover:bg-accent/10 hover:border-accent active:bg-accent/15",
   ghost:
-    "text-neutral-300 bg-transparent hover:text-accent hover:bg-white/5 active:bg-white/10",
+    "text-text bg-transparent hover:text-accent hover:bg-surface active:bg-surface",
 };
 
 const sizeStyles: Record<Size, string> = {

@@ -9,7 +9,7 @@ export default function SectionTitle({
 }) {
   return (
     <Tag
-      className={`font-serif text-[clamp(1.75rem,5vw,3rem)] font-semibold leading-tight tracking-tight text-white [&>span]:text-accent [&>em]:italic [&>em]:text-accent ${className}`}
+      className={`font-serif text-[clamp(1.75rem,5vw,3rem)] font-semibold leading-tight tracking-tight text-heading [&>span]:text-accent [&>em]:italic [&>em]:text-accent ${className}`}
     >
       {children}
     </Tag>

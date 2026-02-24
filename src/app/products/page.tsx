@@ -83,7 +83,7 @@ export default function ProductsPage() {
           </SectionTitle>
         </AnimateIn>
         <AnimateIn delay={0.2}>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-neutral-400">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-muted">
             Beyond client work, we build our own AI products — solving hard
             problems with production-grade machine learning.
           </p>
@@ -91,25 +91,25 @@ export default function ProductsPage() {
       </section>
 
       {/* ==================== WEALTHPILOT ==================== */}
-      <section className="border-t border-white/10 py-16 sm:py-24">
+      <section className="border-t border-border py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <AnimateIn>
-            <div className="relative overflow-hidden rounded-2xl border border-accent/30 bg-white/[0.02]">
+            <div className="relative overflow-hidden rounded-2xl border border-accent/30 bg-surface">
               {/* Left gradient overlay */}
               <div className="pointer-events-none absolute left-0 top-0 h-full w-1/3 bg-gradient-to-r from-accent/[0.06] to-transparent" />
 
               {/* Flagship badge */}
-              <div className="absolute right-3 top-3 sm:right-5 sm:top-5 z-10 rounded-full bg-accent px-3 sm:px-4 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-neutral-950">
+              <div className="absolute right-3 top-3 sm:right-5 sm:top-5 z-10 rounded-full bg-accent px-3 sm:px-4 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-heading">
                 Flagship
               </div>
 
               <div className="relative z-[1] p-5 sm:p-8 lg:p-12">
                 {/* Title area */}
                 <SectionLabel>Flagship Product</SectionLabel>
-                <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                <h2 className="mt-4 font-serif text-4xl font-semibold tracking-tight text-heading sm:text-5xl">
                   WealthPilot
                 </h2>
-                <p className="mt-4 max-w-2xl text-base leading-relaxed text-neutral-400">
+                <p className="mt-4 max-w-2xl text-base leading-relaxed text-text-muted">
                   An intelligent quantitative trading system powered by machine
                   learning — designed to surface opportunities that traditional
                   analysis misses. Built with the same production rigor we brought
@@ -120,17 +120,17 @@ export default function ProductsPage() {
                 <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                   {wpFeatures.map((f, i) => (
                     <AnimateIn key={f.title} delay={0.05 + i * 0.06}>
-                      <div className="flex gap-4 rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 transition-colors hover:border-accent/20">
+                      <div className="flex gap-4 rounded-xl border border-border-subtle bg-surface p-5 transition-colors hover:border-accent/20">
                         <f.icon
                           size={22}
                           className="mt-0.5 flex-shrink-0 text-accent"
                           strokeWidth={1.5}
                         />
                         <div>
-                          <h3 className="text-sm font-semibold text-white">
+                          <h3 className="text-sm font-semibold text-heading">
                             {f.title}
                           </h3>
-                          <p className="mt-1.5 text-xs leading-relaxed text-neutral-500">
+                          <p className="mt-1.5 text-xs leading-relaxed text-text-dim">
                             {f.desc}
                           </p>
                         </div>
@@ -144,7 +144,7 @@ export default function ProductsPage() {
                   <Button href="/contact">
                     Request Early Access <ArrowRight size={16} />
                   </Button>
-                  <span className="flex items-center gap-2 text-sm text-neutral-400">
+                  <span className="flex items-center gap-2 text-sm text-text-muted">
                     <span className="pulse-dot inline-block h-2 w-2 rounded-full bg-green-400" />
                     In active development
                   </span>
@@ -156,7 +156,7 @@ export default function ProductsPage() {
       </section>
 
       {/* ==================== COMING SOON ==================== */}
-      <section className="border-t border-white/10 bg-white/[0.02] py-16 sm:py-24">
+      <section className="border-t border-border bg-surface py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <AnimateIn>
             <SectionLabel>More Products</SectionLabel>
@@ -168,18 +168,18 @@ export default function ProductsPage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {comingSoon.map((item, i) => (
               <AnimateIn key={i} delay={0.1 + i * 0.1}>
-                <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-dashed border-white/10 bg-transparent p-10 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/[0.03]">
+                <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-transparent p-10 text-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-surface">
                     <HelpCircle
                       size={24}
-                      className="text-neutral-600"
+                      className="text-text-dim"
                       strokeWidth={1.5}
                     />
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold text-neutral-500">
+                  <h3 className="mt-5 text-lg font-semibold text-text-dim">
                     {item.title}
                   </h3>
-                  <p className="mt-2 max-w-sm text-sm text-neutral-600">
+                  <p className="mt-2 max-w-sm text-sm text-text-dim">
                     {item.desc}
                   </p>
                 </div>
@@ -190,7 +190,7 @@ export default function ProductsPage() {
           {/* Newsletter inline */}
           <AnimateIn delay={0.3}>
             <div className="mx-auto mt-12 max-w-md text-center">
-              <p className="mb-4 text-sm text-neutral-500">
+              <p className="mb-4 text-sm text-text-dim">
                 Get notified when new products launch.
               </p>
               <NewsletterForm />

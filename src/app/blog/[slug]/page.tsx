@@ -34,7 +34,7 @@ export default function BlogPostPage({ params }: Props) {
       <AnimateIn>
         <Link
           href="/blog"
-          className="group mb-10 inline-flex items-center gap-2 font-jetbrains text-xs uppercase tracking-wider text-neutral-500 transition-colors hover:text-accent"
+          className="group mb-10 inline-flex items-center gap-2 font-jetbrains text-xs uppercase tracking-wider text-text-dim transition-colors hover:text-accent"
         >
           <ArrowLeft
             size={14}
@@ -51,13 +51,11 @@ export default function BlogPostPage({ params }: Props) {
             {post.tag}
           </span>
 
-          <h1 className="mt-5 font-serif text-[clamp(1.75rem,5vw,3rem)] font-semibold leading-tight tracking-tight text-white">
+          <h1 className="mt-5 font-serif text-[clamp(1.75rem,5vw,3rem)] font-semibold leading-tight tracking-tight text-heading">
             {post.title}
           </h1>
 
-          <div className="mt-5 flex items-center gap-4 text-sm text-neutral-500">
-            <time className="font-jetbrains text-xs">{post.date}</time>
-            <span className="h-1 w-1 rounded-full bg-neutral-700" />
+          <div className="mt-5 flex items-center gap-4 text-sm text-text-dim">
             <span className="font-jetbrains text-xs">{post.readTime}</span>
           </div>
         </header>
@@ -65,23 +63,23 @@ export default function BlogPostPage({ params }: Props) {
 
       {/* MDX content */}
       <AnimateIn delay={0.2}>
-        <div className="prose-blog font-outfit text-base leading-[1.8] text-neutral-300">
+        <div className="prose-blog font-outfit text-base leading-[1.8] text-text">
           <MDXRemote source={post.content} />
         </div>
       </AnimateIn>
 
       {/* Author info */}
       <AnimateIn delay={0.3}>
-        <footer className="mt-16 border-t border-white/10 pt-10">
+        <footer className="mt-16 border-t border-border pt-10">
           <div className="flex items-center gap-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-neutral-800 to-neutral-900 border border-white/10">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-card to-bg border border-border">
               <span className="font-serif text-sm font-semibold text-accent/80 select-none">
                 RK
               </span>
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">{post.author}</p>
-              <p className="font-jetbrains text-[11px] uppercase tracking-[0.15em] text-neutral-500">
+              <p className="text-sm font-semibold text-heading">{post.author}</p>
+              <p className="font-jetbrains text-[11px] uppercase tracking-[0.15em] text-text-dim">
                 Founder, Koovis AI
               </p>
             </div>
